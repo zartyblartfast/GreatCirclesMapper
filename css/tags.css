@@ -20,7 +20,8 @@
   padding: 5px 10px;
   max-height: 30px; /* Adjust this value based on your needs */
   overflow: hidden;
-  transition: all 0.8s ease-in-out;
+  /* transition: all 0.8s ease-in-out; */
+  transition: max-height 0.8s ease-in-out;
 }
 
 .tag .main-content {
@@ -55,7 +56,7 @@
 }
 
 .tag.expanded {
-    max-height: 250px; /* Adjust this value based on your needs */
+    max-height: 500px;
   }
 
 .tag.expanded .tag-delete {

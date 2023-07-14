@@ -17,7 +17,7 @@
 .container {
   display: grid;
   grid-template-columns: var(--column-width) var(--column-width);
-  grid-template-rows: auto auto auto auto auto auto auto auto; /* Add one more 'auto' for the new row */
+  grid-template-rows: auto auto auto auto auto auto auto auto; 
   gap: 2px 2px;
   grid-auto-flow: row;
   justify-items: stretch;
@@ -27,9 +27,9 @@
     "airport-a-filter-search airport-b-filter-search"
     "airport-a-code airport-b-code"
     "add-button-container suggestions-button-container"
-    "make-maps-button make-maps-button"
     "info-message-container info-message-container"
-    "location-pair-tags location-pair-tags";
+    "make-maps-button make-maps-button"
+    "location-pair-tags-container location-pair-tags-container";
 }
 
 .location-a-label,
@@ -87,13 +87,26 @@
   color: #333;
 }
 
-.add-button-container { grid-area: add-button-container; width: var(--field-width); }
-.suggestions-button-container { grid-area: suggestions-button-container; width: var(--field-width); }
-.info-message-container { grid-area: info-message-container; width: 100%; }
+.add-button-container { 
+  grid-area: add-button-container; 
+  width: var(--field-width); 
+}
+.suggestions-button-container { 
+  grid-area: suggestions-button-container; 
+  width: var(--field-width); 
+}
+.make-maps-button-container {
+  grid-area: make-maps-button-container; 
+  width: var(--tag-width); 
+  grid-column: span 2;
+}
+.info-message-container { 
+  grid-area: info-message-container; 
+  width: 100%; 
+}
 #info-message { color: red; margin-top: 10px; }
 
-
-/* tag section removed here */ 
+.location-pair-tags-container { grid-area: location-pair-tags-container; }
 
 body {
   text-decoration: none;
@@ -131,12 +144,6 @@ button {
   display: block;
   margin-top: 20px;
   width: 100%;
-}
-
-.make-maps-button-container {
-  grid-area: make-maps-button-container; 
-  width: var(--tag-width); 
-  grid-column: span 2;
 }
 
 table { width: 100%; border-collapse: collapse; }

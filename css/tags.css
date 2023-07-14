@@ -1,5 +1,5 @@
+.location-pair-tags-container { grid-area: location-pair-tags-container; }
 
-.location-pair-tags { grid-area: location-pair-tags; }
 
 .tag[data-suggested="true"] { background-color: lightblue; }
 
@@ -15,10 +15,10 @@
   color: #fff;
   margin: 5px 5px 5px 0;
   border-radius: 5px;
-  position: relative;
+  /*position: relative;*/
   width: var(--tag-width);
   padding: 5px 10px;
-  max-height: 30px; /* Adjust this value based on your needs */
+  max-height: 30px; 
   overflow: hidden;
   /* transition: all 0.8s ease-in-out; */
   transition: max-height 0.8s ease-in-out;
@@ -56,7 +56,7 @@
 }
 
 .tag.expanded {
-    max-height: 500px;
+     max-height: 500px; 
   }
 
 .tag.expanded .tag-delete {
@@ -73,8 +73,6 @@
   /* background: linear-gradient(45deg, darkgrey, grey); */
   background: linear-gradient(45deg, lightgrey 5%, darkgrey, grey);
 }
-
-/* tag elements from styles.css above this point */s
 
 .tag-content .header {
     /* Add styles for the header within the additional info */

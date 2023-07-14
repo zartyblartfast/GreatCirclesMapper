@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
       };      
   
       console.log('User added a new pair:', newPair);
-      locationPair.addLocationPair(newPair);
+      locationPair.addLocationPair(newPair, false);
       
       document.getElementById('airport-a-filter-search').value = '';
       document.getElementById('country-a-dropdown').value = '';

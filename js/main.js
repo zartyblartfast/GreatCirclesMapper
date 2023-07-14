@@ -1,4 +1,3 @@
-// moved from locationPair.js 
 export let locationPairs = JSON.parse(localStorage.getItem('locationPairs')) || [];
 
 // copied from airportList.js for restructuring

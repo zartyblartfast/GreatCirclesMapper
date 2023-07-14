@@ -10,14 +10,6 @@ window.addEventListener('DOMContentLoaded', async () => {
       const suggestionPairs = await response.json();
       console.log('Successfully fetched suggestion pairs:', suggestionPairs);
 
-      //document.getElementById('suggestions-button').addEventListener('click', () => {
-      //  console.log('Suggestions button clicked. Processing suggestion pairs...');
-      //  locationPair.lastSuggestionPairs.forEach(pair => {
-      //    console.log('Removing suggestion pair:', pair);
-      //    locationPair.removeLocationPair(pair, true);
-      //  });
-
-        //locationPair.lastSuggestionPairs = [];
       document.getElementById('suggestions-button').addEventListener('click', () => {
         console.log('Suggestions button clicked. Processing suggestion pairs...');
         locationPair.lastSuggestionPairs.forEach(pair => {

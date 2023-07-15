@@ -17,8 +17,9 @@
 .button:before, .button:after {
     content: "";
     position: absolute;
+    /*position: relative;*/
     top: -1.5em;
-    z-index: -1;
+    /*z-index: -1;*/
     width: 200%;
     aspect-ratio: 1;
     border: none;

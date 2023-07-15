@@ -10,57 +10,6 @@ export class LocationPair {
     this.displayLocationPairs = this.displayLocationPairs.bind(this);
   }
 
-  /*
-  addLocationPair(pair, isSuggested) {
-    console.log('addLocationPair called with pair:', pair, 'and isSuggested:', isSuggested);
-    this.locationPairs.push(pair);
-    if (!isSuggested) {
-      localStorage.setItem('locationPairs', JSON.stringify(this.locationPairs));
-      console.log('addLocationPair isSuggested = false');
-    } else {
-      console.log('addLocationPair isSuggested = true');
-    }
-    this.displayLocationPairs(this.locationPairs);
-  }
-  */
-
-  /*
-  addLocationPair(pair, isSuggested) {
-    console.log('addLocationPair called with pair:', pair, 'and isSuggested:', isSuggested);
-    pair.isSuggested = isSuggested; // Ensure 'isSuggested' is stored
-    this.locationPairs.push(pair);
-    if (!isSuggested) {
-      localStorage.setItem('locationPairs', JSON.stringify(this.locationPairs));
-      console.log('addLocationPair isSuggested = false');
-    } else {
-      console.log('addLocationPair isSuggested = true');
-    }
-    this.displayLocationPairs(this.locationPairs);
-  }
-  */
-
-  /*
-  addLocationPair(pair, isSuggested) {
-    console.log('addLocationPair called with pair:', pair, 'and isSuggested:', isSuggested);
-    
-    // Explicitly add isSuggested to pair
-    pair.isSuggested = isSuggested || false;
-  
-    this.locationPairs.push(pair);
-  
-    // Save only user added pairs to local storage
-    if (!pair.isSuggested) {
-      this.userAddedPairs.push(pair);
-      localStorage.setItem('locationPairs', JSON.stringify(this.userAddedPairs));
-      console.log('addLocationPair isSuggested = false');
-    } else {
-      console.log('addLocationPair isSuggested = true');
-    }
-  
-    this.displayLocationPairs(this.locationPairs);
-  }
-  */
-
   addLocationPair(pair, isSuggested) {
     console.log('addLocationPair called with pair:', pair, 'and isSuggested:', isSuggested);
     

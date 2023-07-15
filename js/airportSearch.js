@@ -15,6 +15,14 @@ export function setSelectedAirportBCode(code) {
   selectedAirportBCode = code;
 }
 
+export function getSelectedAirportACode() {
+  return selectedAirportACode;
+}
+
+export function getSelectedAirportBCode() {
+  return selectedAirportBCode;
+}
+
 export async function initializeAirportSearch() {
   let airportList;
 
@@ -73,4 +81,4 @@ export async function initializeAirportSearch() {
     updateAwesompleteList
   };
 }
-export { selectedAirportACode, selectedAirportBCode };
+

@@ -1,5 +1,5 @@
 import { getAirportList } from './main.js';
-import { selectedAirportACode, selectedAirportBCode } from './airportSearch.js';
+import { setSelectedAirportACode, setSelectedAirportBCode, getSelectedAirportACode, getSelectedAirportBCode } from './airportSearch.js';
 import { locationPair } from './locationPairClass.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('add-button').addEventListener('click', () => {
       const airportList = getAirportList();
       
-      const airportA = airportList.find(airport => airport.value === selectedAirportACode);
-      const airportB = airportList.find(airport => airport.value === selectedAirportBCode);
+      const airportA = airportList.find(airport => airport.value === getSelectedAirportACode());
+      const airportB = airportList.find(airport => airport.value === getSelectedAirportBCode());
       
       console.log('Selected airports:', airportA, airportB);
 
@@ -47,6 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('airport-b-filter-search').disabled = true;
 
       document.getElementById('add-button').disabled = true;
+
+        // After adding the new pair, clear the selected airports
+      setSelectedAirportACode('');
+      setSelectedAirportBCode('');
       
     });
   
